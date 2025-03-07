@@ -83,7 +83,8 @@
         <section class="section" id="contact">
             <h2>Let's Connect</h2>
             <div class="contact-form">
-                <form action="https://web3forms.com/submissions" method="POST">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                     <input type="hidden" name="access_key" value="c61e680e-d372-4300-9c79-d00e071875cb">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Your Name" required>
                     </div>
@@ -93,6 +94,11 @@
                     <div class="form-group">
                         <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
                     </div>
+                    <div class="form-group">
+                        <!-- Honeypot Spam Protection -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    </div>
+                    
                     <button type="submit">Send Message</button>
                 </form>
             </div>
